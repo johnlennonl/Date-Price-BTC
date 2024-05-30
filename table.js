@@ -33,8 +33,8 @@ fetch('https://api.binance.com/api/v3/ticker/price')
 
             const img = document.createElement('img');
             img.src = crypto.image;
-            img.width = 25;
-            img.height = 25;
+            img.width = 20;
+            img.height = 20;
 
             cell1.textContent = crypto.symbol.toUpperCase();
             cell2.textContent = `$${binancePrice}`; // Precio de Binance

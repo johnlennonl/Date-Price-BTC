@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Price Cryptocurrencies BTC/ETH/LTC">
+    <title>CRYPTO.DATE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="shortcut icon" href="img/2.png" type="image/x-icon">
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+</head>
+
+<body>
+    <!--Navegador-->
+    <section class="container">
+        <nav class="navbar navbar-expand-lg contenedorNav">
+            <div class="container-fluid">
+             <p><a class="navbar-brand logoNav" href="#">CRYPTO.DATE</a></p>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link textNav" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item textNav">
+                    <a class="nav-link textNav" href="#">Cryptos</a>
+                  </li>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link textNav" aria-disabled="true">Wallets</a>
+                  </li>
+                </ul>
+               <div class="gap-3 d-md-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-gear iconNav" viewBox="0 0 16 16">
+                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-info-circle iconNav" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                  </svg>
+               </div>
+              </div>
+            </div>
+          </nav>
+
+    </section>
+    
+
+    <!--Banner-->
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h1 class=" bienvenida mx-auto mb-3">Welcome to <em class="emBienvenida">CRYPTO.DATE</em></h1>
+            <p class="col-lg-10 fs-4 mx-auto description">Check the status of your favorite cryptocurrencies here, calculate your cryptocurrencies with our reliable calculator.</p>
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5">
+            <form class="form mx-auto" id="subscriptionForm">
+                <span class="title">Subscribe to our newsletter.</span>
+                <p class="description">Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt dolore.</p>
+                <div>
+                  <input placeholder="Enter your email" type="email" name="email" id="email-address">
+                  <button class="button" type="submit" id="alertButton">Subscribe</button>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+
+    <!--Titulo-->
+    <section class=" container contenedorSearch pt-3 pb-3 ">
+        <div class="contnedorTitulo container ">
+            <h1 class="titulo text-center mt-3 mb-2">Price Cryptocurrencies</h1>
+        </div>
+        <div class="container d-flex justify-content-center mt-3 ">
+            <input class="search-input " type="text" id="searchInput" placeholder="Buscar criptomoneda">
+            <!-- Agregamos un botón de búsqueda -->
+            <button class="estiloBoton button  " oninput="buscarCriptomoneda()">Buscar</button>
+            
+        </div>
+        <div class="container d-flex justify-content-center mb-5 mt-3">
+            <h3 class="informacionBusqueda mx-auto text-center">Make sure to write the Symbol of the cryptocurrency Ex: BTC, ETH, BNB...
+            </h3>
+        </div>
+        <div class="container d-flex justify-content-center">
+            <div class="loader"></div>
+        </div>
+
+    </section>
+
+    <!--Card de criptomonedas-->
+    <div class="container d-flex justify-content-center mx-auto contenedorPrincipal ">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <div class="contenedorPrice  mx-auto  " id="card-cripto-BTC">
+                    <h2 class="mostrar_datos" id="mostrar_datos"> <!--jS--> </h2>
+                    <p class="mostrar_porcentaje" id="mostrar_porcentaje"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class="container text-center contenedorCalculadora">
+                        <p class="calculadora">Calculadora BTC</p>
+                        <label class="labelmonto" for="monto_btc"></label>
+                        <input class="search-input my-4" type="number" id="monto_btc" step="any"
+                            placeholder="Monto en BTC">
+                        <!-- Llamamos a la función calcularValorCriptomoneda con los parámetros adecuados -->
+                        <button class="button mb-4" onclick="calcularValorBTC()">Calcular
+                            Valor</button>
+                        <div class="mostrarValor mt-3 mb-5" id="mostrar_valor"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="container contenedorPrice  mx-auto  " id="card-cripto-ETH">
+                    <h2 class="mostrar_datos" id="mostrar_datos2"> <!--jS--> </h2>
+                    <p class="mostrar_porcentajeEth" id="mostrar_porcentajeEth"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class=" text-center contenedorCalculadora">
+                        <p class="calculadora">Calculator ETH</p>
+                        <label class="labelmonto" for="monto_eth"></label>
+                        <input class="search-input my-4" type="number" id="monto_eth" step="any"
+                            placeholder="Monto en ETH">
+                        <button class="button mb-4" onclick="calcularValorETH()">Calcular Valor</button>
+                        <div class="mostrarValor mt-3 mb-3" id="mostrar_valorEth"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col  d-flex justify-content-center">
+                <div class="container contenedorPrice  mx-auto " id="card-cripto-LTC">
+                    <h2 class="mostrar_datos" id="mostrar_datos3"> <!--jS--> </h2>
+                    <p class="mostrar_porcentajeLtc" id="mostrar_porcentajeLtc"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class=" text-center contenedorCalculadora">
+                        <p class="calculadora">Calculator LTC</p>
+                        <label class="labelmonto" for="monto_ltc"></label>
+                        <input class="search-input my-4" type="number" id="monto_ltc" step="any"
+                            placeholder="Monto en LTC">
+                        <button class="button mb-4" onclick="calcularValorLTC()">Calcular Valor</button>
+                        <div class="mostrarValor mt-3 mb-3" id="mostrar_valorLtc"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col  d-flex justify-content-center">
+                <div class="container contenedorPrice  mx-auto  " id="card-cripto-BNB">
+                    <h2 class="mostrar_datos" id="mostrar_datos4"> <!--jS--> </h2>
+                    <p class="mostrar_porcentaje" id="mostrar_porcentajeBnb"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class=" text-center contenedorCalculadora">
+                        <p class="calculadora">Calculator BNB</p>
+                        <label class="labelmonto" for="monto_bnb"></label>
+                        <input class="search-input my-4" type="number" id="monto_bnb" step="any"
+                            placeholder="Monto en BNB">
+                        <button class="button mb-4" onclick="calcularValorBNB()">Calcular Valor</button>
+                        <div class="mostrarValor mt-3 mb-3" id="mostrar_valorBnb"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col  d-flex justify-content-center">
+                <div class="container contenedorPrice  mx-auto " id="card-cripto-SOL">
+                    <h2 class="mostrar_datos" id="mostrar_datos5"> <!--jS--> </h2>
+                    <p class="mostrar_porcentajeSol" id="mostrar_porcentajeSol"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class=" text-center contenedorCalculadora">
+                        <p class="calculadora">Calculator SOL</p>
+                        <label class="labelmonto" for="monto_sol"></label>
+                        <input class="search-input my-4" type="number" id="monto_sol" step="any"
+                            placeholder="Monto en SOL">
+                        <button class="button mb-4" onclick="calcularValorSOL()">Calcular Valor</button>
+                        <div class="mostrarValor mt-3 mb-3" id="mostrar_valorSol"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col  d-flex justify-content-center">
+                <div class="container contenedorPrice  mx-auto " id="card-cripto-DOGE">
+                    <h2 class="mostrar_datos" id="mostrar_datos6"> <!--jS--> </h2>
+                    <p class="mostrar_porcentajeDoge" id="mostrar_porcentajeDoge"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class=" text-center contenedorCalculadora">
+                        <p class="calculadora">Calculator DOGE</p>
+                        <label class="labelmonto" for="monto_doge"></label>
+                        <input class="search-input my-4" type="number" id="monto_doge" step="any"
+                            placeholder="Monto en DOGE">
+                        <button class="button mb-4" onclick="calcularValorDOGE()">Calcular Valor</button>
+                        <div class="mostrarValor mt-3 mb-3" id="mostrar_valorDoge"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col  d-flex justify-content-center">
+                <div class="container contenedorPrice  mx-auto " id="card-cripto-SHIB">
+                    <h2 class="mostrar_datos" id="mostrar_datos7"> <!--jS--> </h2>
+                    <p class="mostrar_porcentaje" id="mostrar_porcentajeShib"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class=" text-center contenedorCalculadora">
+                        <p class="calculadora">Calculator SHIB</p>
+                        <label class="labelmonto" for="monto_shib"></label>
+                        <input class="search-input my-4" type="number" id="monto_shib" step="any"
+                            placeholder="Monto en SHIB">
+                        <button class="button mb-4" onclick="calcularValorSHIB()">Calcular Valor</button>
+                        <div class="mostrarValor mt-3 mb-3" id="mostrar_valorShib"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col  d-flex justify-content-center">
+                <div class="container contenedorPrice  mx-auto " id="card-cripto-XRP">
+                    <h2 class="mostrar_datos" id="mostrar_datos8"> <!--jS--> </h2>
+                    <p class="mostrar_porcentaje" id="mostrar_porcentajeXrp"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class=" text-center contenedorCalculadora">
+                        <p class="calculadora">Calculator XRP</p>
+                        <label class="labelmonto" for="monto_xrp"></label>
+                        <input class="search-input my-4" type="number" id="monto_xrp" step="any"
+                            placeholder="Monto en XRP">
+                        <button class="button mb-4" onclick="calcularValorXRP()">Calcular Valor</button>
+                        <div class="mostrarValor mt-3 mb-3" id="mostrar_valorXrp"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col  d-flex justify-content-center">
+                <div class="container contenedorPrice  mx-auto " id="card-cripto-ADA">
+                    <h2 class="mostrar_datos" id="mostrar_datos9"> <!--jS--> </h2>
+                    <p class="mostrar_porcentaje" id="mostrar_porcentajeAda"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class=" text-center contenedorCalculadora">
+                        <p class="calculadora">Calculator ADA</p>
+                        <label class="labelmonto" for="monto_ada"></label>
+                        <input class="search-input my-4" type="number" id="monto_ada" step="any"
+                            placeholder="Monto en ADA">
+                        <button class="button mb-4" onclick="calcularValorADA()">Calcular Valor</button>
+                        <div class="mostrarValor mt-3 mb-3" id="mostrar_valorAda"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col  d-flex justify-content-center">
+                <div class="container contenedorPrice  mx-auto " id="card-cripto-XLM">
+                    <h2 class="mostrar_datos" id="mostrar_datos12"> <!--jS--> </h2>
+                    <p class="mostrar_porcentaje" id="mostrar_porcentajeXlm"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class=" text-center contenedorCalculadora">
+                        <p class="calculadora">Calculator XLM</p>
+                        <label class="labelmonto" for="monto_xlm"></label>
+                        <input class="search-input my-4" type="number" id="monto_xlm" step="any"
+                            placeholder="Monto en XLM">
+                        <button class="button mb-4" onclick="calcularValorXLM()">Calcular Valor</button>
+                        <div class="mostrarValor mt-3 mb-3" id="mostrar_valorXlm"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col  d-flex justify-content-center">
+                <div class="container contenedorPrice  mx-auto " id="card-cripto-AVAX">
+                    <h2 class="mostrar_datos" id="mostrar_datos13"> <!--jS--> </h2>
+                    <p class="mostrar_porcentaje" id="mostrar_porcentajeAvax"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class=" text-center contenedorCalculadora">
+                        <p class="calculadora">Calculator AVAX</p>
+                        <label class="labelmonto" for="monto_avax"></label>
+                        <input class="search-input my-4" type="number" id="monto_avax" step="any"
+                            placeholder="Monto en AVAX">
+                        <button class="button mb-4" onclick="calcularValorAVAX()">Calcular Valor</button>
+                        <div class="mostrarValor mt-3 mb-3" id="mostrar_valorAvax"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col  d-flex justify-content-center">
+                <div class="container contenedorPrice  mx-auto " id="card-cripto-ATOM">
+                    <h2 class="mostrar_datos" id="mostrar_datos15"> <!--jS--> </h2>
+                    <p class="mostrar_porcentaje" id="mostrar_porcentajeAtom"> <!--jS--> </p>
+                    <!--Calculadora-->
+                    <div class=" text-center contenedorCalculadora">
+                        <p class="calculadora">Calculator ATOM</p>
+                        <label class="labelmonto" for="monto_atom"></label>
+                        <input class="search-input my-4" type="number" id="monto_atom" step="any"
+                            placeholder="Monto en ATOM">
+                        <button class="button mb-4" onclick="calcularValorATOM()">Calcular Valor</button>
+                        <div class="mostrarValor mt-3 mb-3" id="mostrar_valorAtom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+
+
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-light">FAQs</a></li>
+                <li class="nav-item "><a href="#" class="nav-link px-2 text-light">About</a></li>
+            </ul>
+            <p class="text-center text-light">&copy; 2024 Company, Inc</p>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+    <!-- <script src="app.js"></script> -->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- <script src="charts.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+
+</html>

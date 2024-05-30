@@ -21,7 +21,6 @@ body {
 }
 .contenedorPrice{
   width: 400px;
-  /* background-color: rgba(26, 25, 25, 0.961); */
   background: #212121;
   background: -webkit-linear-gradient(to right, #0f0f0f, #212121);
   background: linear-gradient(to right, #191919, #191919);

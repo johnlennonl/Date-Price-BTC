@@ -297,30 +297,6 @@ const calcularValorATOM = () => {
   );
 }
 
-
-
-// //Buscar Crypto 
-// function buscarCriptomoneda() {
-//   // Obtener el valor ingresado por el usuario
-//   const searchTerm = document.getElementById("searchInput").value.toUpperCase();
-//   console.log(searchTerm)
-
-//   // Recorrer la lista de criptomonedas y mostrar/ocultar las tarjetas según corresponda
-//   cryptocurrencies.forEach(crypto => {
-//       const cryptoSymbol = crypto.symbol.toUpperCase();
-//       const card = document.getElementById(`card-cripto-${cryptoSymbol}`);
-//       // Mostrar todas las tarjetas si el campo de búsqueda está vacío
-//       if (searchTerm === "") {
-//         card.style.display = "block";
-//     } else {
-//         if (cryptoSymbol === searchTerm || crypto.name.toUpperCase() === searchTerm.toUpperCase()) {
-//             card.style.display = "block";
-//         } else {
-//             card.style.display = "none";
-//         }
-//     }
-// });
-
 function buscarCriptomoneda() {
   // Obtener el valor ingresado por el usuario
   const searchTerm = document.getElementById("searchInput").value.toUpperCase();
